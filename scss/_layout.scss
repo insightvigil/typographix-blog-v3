@@ -1,0 +1,37 @@
+/* main */
+.main {
+    width: 80%;
+    margin: 50px auto;
+}
+
+
+
+/* Featured Article Styles */
+
+.featured-article {
+    margin-bottom: 50px;
+}
+
+    .featured-article h1 {
+        font-weight: 900;
+        font-size: 4.0rem;
+        margin: 15px 0;
+
+    }
+
+    .featured-article p {
+        font-size: 1.92rem;
+        color: rgb(85,85,85);
+        margin-bottom: 20px 0 20px;
+    }
+
+
+    
+
+
+.featured-article img, .article img {
+    width:100%;
+    max-height: 300px ;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
