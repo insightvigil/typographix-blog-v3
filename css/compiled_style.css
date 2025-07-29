@@ -42,6 +42,10 @@ body {
   font-size: 1.6rem;
 }
 
+strong {
+  color: var(--secondary--font-color);
+}
+
 /* main */
 .main {
   width: 80%;
