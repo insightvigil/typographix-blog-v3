@@ -1,7 +1,7 @@
 /* Media - Queries */ 
 
 /* Tablet */ 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1025px)  {
 
     .nav-left h1 {
         font-size: 2.4rem !important;
@@ -13,45 +13,48 @@
 
     .featured-article h1 {
         font-size: 2.2rem;
-
-        &-skeleton {
-            margin-bottom: 10px;
-        }
     }
 
     .article {
-        width: 95%;
         margin-bottom: 20px;
+
+        h2 {
+            font-size: 1.7rem;
+        }
+    }
+
+    .article-skeleton {
+        margin-bottom: 20px;
+    }
+
+
+    .smaller-articles {
+        flex-direction: column;
+
+    }
+
+
+    .article {
+        width: 95%;
+        margin: 30px auto;
 
         .text-content {
             width: 90%;
         }
 
-        h1{
+        h1 {
             font-size: 2.2rem;
         }
 
-        h2 {
-            font-size: 1.7rem;
-        }
         p {
             font-size: 1.1rem;
         }
     }
 
-
-    .smaller-articles {
-        @include flex-center;
-        flex-direction: column;
-
-        
-    }
-
-    /*Variations */
+/*Image - Variations */
 .centered-image-article img {
-    width: 100%;
-    max-height: 45vh;
-    margin-bottom: 30px;
+    max-height: 35vh;
+    margin-bottom: 20px;
 }
 
 .left-image-article,  .right-image-article{
@@ -60,15 +63,12 @@
 
 
     img {
-        width: 115%;
+        width: 100%;
         height: auto;
         max-height: 35vh;
         margin-bottom: 20px;
+        }
     }
-}
-
-
-
 }
 
 /* Smartphone Vertical */ 
@@ -79,33 +79,35 @@
         flex-direction: column;
         align-items: flex-start;
         height: auto;
-        padding: 10px 5%;
+        padding: 10px 5%;    
+    }
 
-        .nav-left h1 {
-        font-size: 2.4rem;
-        }
-
-        .nav-right a {
+    .nav-right a {
         margin-left: unset;
         margin-right: 20px;
         }
-    }
 
     article, .text-content{
         width: 100%;
         margin: 30px auto;
     } 
 
-    h1 {
+    article .text-content {
+        width: 40ch;
+    }
+    
+
+    article h1 {
         font-size: 2.5rem;
     }
 
-    h2 {
+    article h2 {
         margin: 12px 0;
+        font-size: 2.0rem;
     }
 
     p {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 
 }
