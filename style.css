@@ -1,0 +1,270 @@
+:root {
+    --on-background:whitesmoke;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: rgb(33, 33, 33);
+    line-height: 1.6;
+    font-size: 1.92rem;
+} 
+
+a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: hsl(214, 100%, 50%);
+    transition: color 0.3s;
+}
+    a:hover {
+         color: hsl(214, 100%, 35%);
+
+    }
+
+
+/* ----- Sticky Navbar --------*/
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 60px;
+    background-color: var(--on-background);
+    color: rgb(51,51,51);
+}
+
+.nav-left h1 {
+    font-size:4.8rem;
+    font-weight:900;
+    transition: font-size 0.3s ease;
+    
+}
+
+#navbar.scrolled .nav-left h1 {
+    font-size: 2.4rem;
+}
+
+.nav-right a {
+    margin-left: 20px;
+    color: hsl(0,0%,13%);
+}
+
+.nav-right a:hover {
+    color: color hsl(0, 0%, 25%);
+}
+
+/*Skeleton Styles Hidden */
+
+.hidden {
+    display: none;
+}
+
+.featured-article-skeleton {
+    margin-bottom: 50px;
+}
+
+.article-skeleton {
+    flex: 1;
+    margin: 0 15px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.skeleton-image {
+    height: 300px;
+}
+
+.skeleton-line {
+    height: 25px;
+    margin-bottom: 15px;
+}
+
+.skeleton-image, .skeleton-line {
+    background: linear-gradient(90deg, #e0e0e0, #f0f0f0, #e0e0e0);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+.skeleton-line--large {
+    height: 40px;
+    margin: 40px auto;
+}
+
+/* Shimmer animation */ 
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+
+
+
+
+/* main */
+.main {
+    width: 80%;
+    margin: 50px auto;
+}
+
+
+
+/* Featured Article Styles */
+
+.featured-article {
+    margin-bottom: 50px;
+}
+
+    .featured-article h1 {
+        font-weight: 900;
+        font-size: 4.0rem;
+        margin: 15px 0;
+
+    }
+
+    .featured-article p {
+        font-size: 1.92rem;
+        color: rgb(85,85,85);
+        margin-bottom: 20px 0 20px;
+    }
+
+
+    
+
+
+.featured-article img, .article img {
+    width:100%;
+    max-height: 300px ;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+
+
+/* Smaller Articles Styles */
+
+.smaller-articles {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.article {
+    flex: 1;
+    margin: 0 15px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+    .article h2 {
+        font-size: 2.0rem;
+        margin: 15px 0;
+
+    }
+
+    .article p {
+        font-size: 1.6rem;
+    }
+
+
+/* --------- Footer -------*/
+footer {
+    color: rgb(51,51,51);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    font-size: 1.88rem ;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: hsl(0, 0%, 13%);
+    font-size: 2.4rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: color hsl(0, 0%, 25%);
+}
+
+/* Media - Queries */ 
+
+/* Tablet */ 
+@media screen and (max-width: 1025px) {
+
+    .nav-left h1 {
+        font-size: 2.4rem !important;
+    }
+
+    .main {
+        width: 90%;
+    }
+
+    .featured-article h1 {
+        font-size: 2.2rem;
+    }
+
+    .article {
+        margin-bottom: 20px;
+    }
+
+    .article h2 {
+        font-size: 1.7rem;
+    }
+
+    .smaller-articles {
+        flex-direction: column;
+        
+    }
+
+
+
+}
+
+/* Smartphone Vertical */ 
+@media screen and (max-width: 600px){
+    #navbar { 
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px 5%;
+    }
+
+    .nav-left h1 {
+        font-size: 2.4rem;
+    }
+
+    .nav-right a {
+        margin-left: unset;
+        margin-right: 20px;
+    }
+
+    .article {
+        margin:10px 0;
+    }
+}
